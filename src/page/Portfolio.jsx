@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Portfolio() {
   const githubUsername = "mr-web-dev"
@@ -125,6 +126,8 @@ export default function Portfolio() {
           })}
 
         </div>
+
+        <Link to="/skills" className="btn portfolio__btn">Ko'nikmalar ❯</Link>
 
       </div>
 

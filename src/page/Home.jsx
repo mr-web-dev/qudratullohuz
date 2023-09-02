@@ -11,7 +11,7 @@ export default function Home() {
 
           <div className="hero__text-box">
             <h1 className="hero__title">Assalomu Alaykum! <br /> <b className="primary"><span>Qudratulloh</span> Uz</b> portfolio saytiga xush kelibsiz!</h1>
-            <Link className="btn hero__btn">Men haqimda ❯</Link>
+            <Link to="/about" className="btn hero__btn">Men haqimda ❯</Link>
           </div>
           
         </div>

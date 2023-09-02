@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+// images
 import FaHtml5 from '../img/skills/Fa/FaHtml5.svg'
 import FaCss3Alt from '../img/skills/Fa/FaCss3Alt.svg'
 import FaBootstrap from '../img/skills/Fa/FaBootstrap.svg'
@@ -101,6 +103,8 @@ export default function Skills() {
             )
           })}
         </div>
+
+        <Link to="/contact" className="btn skills__btn">Bog'lanish ❯</Link>
 
       </div>
 
