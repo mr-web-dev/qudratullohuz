@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" contant="Qudratulloh Uz">
+    <meta name="itemprog" contant="Qudratulloh Uz">
+    <meta name="description" content="Qudratulloh Mahammadjonovning portfolio websayti">
+    <meta property="og:title" content="Qudratulloh Uz">
+    <meta property="og:image" content="/src/img/logo/svg/favicon500x500.svg">
+    <meta property="og:description" content="Qudratulloh Mahammadjonovning portfolio websayti">
+    <title>Qudratulloh Uz</title>
+    <link rel="apple-touch-icon" href="./src/img/logo/svg/favicon128x128.svg" />
+    <link rel="shortcut icon" href="./public/favicon128x128.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <main translate="no" id="root"></main>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous" ></script>
+    <script>
+      SmoothScroll({
+        // Время скролла 400 = 0.4 секунды
+        animationTime: 800,
+        // Размер шага в пикселях
+        stepSize: 100,
+
+        // Дополнительные настройки:
+
+        // Ускорение
+        accelerationDelta: 30,
+        // Максимальное ускорение
+        accelerationMax: 2,
+
+        // Поддержка клавиатуры
+        keyboardSupport: true,
+        // Шаг скролла стрелками на клавиатуре в пикселях
+        arrowScroll: 50,
+
+        // Pulse (less tweakable)
+        // ratio of "tail" to "acceleration"
+        pulseAlgorithm: true,
+        pulseScale: 4,
+        pulseNormalize: 1,
+
+        // Поддержка тачпада
+        touchpadSupport: true,
+      });
+    </script>
+  </body>
+</html>
