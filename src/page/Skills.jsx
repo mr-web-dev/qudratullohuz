@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 // images
 import FaHtml5 from '../img/skills/Fa/FaHtml5.svg'
@@ -15,6 +15,12 @@ import SiVercel from '../img/skills/Si/SiVercel.svg'
 import FaFigma from '../img/skills/Fa/FaFigma.svg'
 
 export default function Skills() {
+  const [miniLoad , setMiniLoad] = useState(true);
+  function removeMiniLoad(e){
+    setTimeout(() => {
+      setMiniLoad(false);
+    }, 1000);
+  };
   const obj = [
     {
       id: 1,
@@ -76,11 +82,11 @@ export default function Skills() {
       img: FaFigma,
       title: "figma"
     },
-  ]
+  ];
   return (
     <>
     {/* skills start */}
-    <section className="skills">
+    <section className="skills" id='skills'>
 
       <div className="container skills__container">
 
@@ -92,7 +98,8 @@ export default function Skills() {
               <div key={item.id} className="skills__card">
 
                 <div className="skills__card__img-box">
-                  <img draggable="false" src={item.img} alt={item.title} className="skills__card__img" />
+                  <img onLoad={(e)=> removeMiniLoad(e)} draggable="false" src={item.img} alt={item.title} className={miniLoad == false ?"skills__card__img" : "skills__card__img skills__card__img-hidden"} />
+                  <span className={miniLoad == true ? "mini-loader" : "mini-loader mini-loader-hidden"}></span>
                 </div>
                 
                 <div className="skills__card__text-box">

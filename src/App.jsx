@@ -25,10 +25,10 @@ export default function App() {
         <Route path="*" element={<Error404 />} />
         {/* ----- */}
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="skills" element={<Skills />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       {/* ========== */}
       <Footer/>

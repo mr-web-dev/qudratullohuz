@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import Img from "../img/hero__img.svg"
 
 export default function Portfolio() {
-  const githubUsername = "mr-web-dev"
+  const githubUsername = "mr-web-dev";
+  const [miniLoader , setMiniLoader] = useState(true);
+  function removeMiniLoad(e){
+    setTimeout(() => {
+      setMiniLoader(false);
+    }, 1000);
+  }
   const obj = [
     {
       id: 1,
@@ -95,11 +102,11 @@ export default function Portfolio() {
       link: "https://figma-n24.netlify.app",
       github: `https://github.com/${githubUsername}/n24`
     },
-  ]
+  ];
   return (
     <>
     {/* portfolio start */}
-    <section className="portfolio">
+    <section className="portfolio" id='portfolio'>
 
       <div className="container portfolio__container">
 
@@ -112,7 +119,8 @@ export default function Portfolio() {
               <div key={item.id} className="portfolio__card">
 
                 <div className="portfolio__card__img-box">
-                  <img draggable="false" src={item.img} alt={item.title} className="portfolio__card__img" />
+                  <img onLoad={(e)=> removeMiniLoad(e)} draggable="false" src={item.img} alt={item.title} className={miniLoader == true ? "portfolio__card__img portfolio__card__img-hidden" : "portfolio__card__img"} />
+                  <span className={miniLoader == true ? "mini-loader" : "mini-loader mini-loader-hidden"}></span>
                 </div>
 
                 <div className="portfolio__card__text-box">
