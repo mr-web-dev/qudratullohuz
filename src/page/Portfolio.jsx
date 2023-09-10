@@ -4,10 +4,10 @@ import Img from "../img/hero__img.svg"
 
 export default function Portfolio() {
   const githubUsername = "mr-web-dev";
-  const [miniLoader , setMiniLoader] = useState(true);
-  function removeMiniLoad(e){
+  const [miniLoad , setMiniLoad] = useState(true);
+  function removeMiniLoad(){
     setTimeout(() => {
-      setMiniLoader(false);
+      setMiniLoad(false);
     }, 1000);
   }
   const obj = [
@@ -118,9 +118,9 @@ export default function Portfolio() {
             return (
               <div key={item.id} className="portfolio__card">
 
-                <div className="portfolio__card__img-box">
-                  <img onLoad={(e)=> removeMiniLoad(e)} draggable="false" src={item.img} alt={item.title} className={miniLoader == true ? "portfolio__card__img portfolio__card__img-hidden" : "portfolio__card__img"} />
-                  <span className={miniLoader == true ? "mini-loader" : "mini-loader mini-loader-hidden"}></span>
+                <div onLoad={()=> removeMiniLoad()} className="portfolio__card__img-box">
+                  <img draggable="false" src={item.img} alt={item.title} className={miniLoad == true ? "portfolio__card__img portfolio__card__img-hidden" : "portfolio__card__img"} />
+                  <span className={miniLoad == true ? "mini-loader" : "mini-loader mini-loader-hidden"}></span>
                 </div>
 
                 <div className="portfolio__card__text-box">

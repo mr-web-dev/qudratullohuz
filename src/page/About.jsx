@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MyImg from "../img/about__img.jpg"
 import { Link } from 'react-router-dom';
 
 export default function About() {
+  const [miniLoad , SetMiniLoad] = useState(true);
+  function removeMiniLoad(){
+    setTimeout(() => {
+      SetMiniLoad(false);
+    }, 1000);
+  }
   return (
     <>
     {/* about start */}
@@ -10,8 +16,9 @@ export default function About() {
 
         <div className="container about__container">
 
-          <div className="about__img-box">
-            <img draggable="false" src={MyImg} alt="Me" className="about__img" />
+          <div onLoad={(e)=> removeMiniLoad()} className="about__img-box">
+            <img draggable="false" src={MyImg} alt="Me" className={miniLoad == true ? "about__img about__img-hidden" : "about__img"} />
+            <span className={miniLoad == true ? "mini-loader" : "mini-loader mini-loader-hidden"}></span>
           </div>
 
           <div className="about__text-box">
