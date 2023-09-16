@@ -4,6 +4,7 @@ export default function Content() {
   const [content , setContent] = useState(false);
   setInterval(() => {
     setContent(true);
+    // every 5 minutes
   }, 300000);
   return (
     <>
@@ -14,7 +15,7 @@ export default function Content() {
           <button onClick={()=> setContent(false)} className="close-btn">
             <i className="fas fa-times"></i>
           </button>
-          <p className="content__text">Eng so‘ngi yangiliklaridan xabardor bo‘lish uchun rasmiy sahifamga obuna bo‘ling!</p>
+          <p className="content__text">Eng so'ngi yangiliklaridan xabardor bo'lish uchun rasmiy sahifamga obuna bo'ling!</p>
           <div className="btn-box content__btn-box">
             <a href="https://t.me/qudratullohuz" className="btn content__btn">Telegram ❯</a>
             <a href="https://instagram.com/qudratullohuz" className="btn content__btn">Instagram ❯</a>

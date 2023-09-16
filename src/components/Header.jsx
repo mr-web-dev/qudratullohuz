@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link , NavLink } from 'react-router-dom'
 
 export default function Header() {
@@ -28,22 +28,34 @@ export default function Header() {
       title: "Bog'lanish",
       link: "contact"
     }
-  ]
+  ];
+  const [btn, setBtn] = useState(true);
   return (
     <>
     {/* header start */}
-    <header className="header">
+    <header id='top' className={btn == true ? "header" : "header header-active"}>
 
       <div className="container header__container">
 
-        <Link to="/" className="header__logo">Qudratulloh Uz</Link>
+        <button onClick={()=> setBtn(true)} className={btn == false ? "times-btn" : "btn-active"}>
+          <i className="fas fa-times"></i>
+        </button>
+
+        <div className="header__top">
+
+          <Link to="/" className="header__logo">Qudratulloh Uz</Link>
+
+          <div className="btn-wrap">
+
+            <button onClick={()=> setBtn(false)} className={btn == true ? "bars-btn" : "btn-active"}>
+              <i className="fas fa-bars"></i>
+            </button>
+
+          </div>
+
+        </div>
 
         <nav className="nav">
-
-          <button className="bars-btn">
-            <i className="fas fa-bars open-bars"></i>
-            <i className="fas fa-times close-bars"></i>
-          </button>
 
           <ul className="nav__list">
 
