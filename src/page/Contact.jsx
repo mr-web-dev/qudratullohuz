@@ -10,7 +10,7 @@ export default function Contact() {
 
           <h2 className="contact__title">Bog'lanish</h2>
 
-          <form action='https://formspree.io/f/xbjvlwld' method='POST' id="form">
+          <form action='https://formspree.io/f/mayzzdkp' method='POST' id="form">
 
             <input required className='inp' type="text" name="name" id="name" placeholder='Ism'/>
             
